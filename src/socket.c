@@ -4,6 +4,7 @@
 ** See Copyright Notice in mruby.h
 */
 
+
 #ifdef _WIN32
   #include <winsock2.h>
   #include <ws2tcpip.h>
@@ -21,6 +22,16 @@
   #include <netdb.h>
   #include <unistd.h>
 #endif
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <sys/un.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <arpa/inet.h>
+#include <fcntl.h>
+#include <netdb.h>
 
 #include <stddef.h>
 #include <string.h>
